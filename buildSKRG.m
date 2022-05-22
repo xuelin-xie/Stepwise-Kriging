@@ -4,7 +4,7 @@ new_S=[];
 %% p-value 
 global p
 %  Stepwise feature selection
-[B,SE,PVAL,INMODEL,STATS,NEXTSTEP,HISTORY]=stepwisefit(S,Y);  %Stepwise feature selection
+[B,SE,PVAL,INMODEL,STATS,NEXTSTEP,HISTORY]=stepwisefit(S,Y,'penter',p);  %Stepwise feature selection
 S1=[PVAL'; S]; %Added p-value variable for filtering
 k=1;
 for m=1:size(S1,2)
