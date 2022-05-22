@@ -1,12 +1,14 @@
 function Skrgmodel = buildSKRG(S,Y)
 % new_S is the new independent variable (or new feature) initial points after feature selection
 new_S=[];
+%% p-value 
+global p
 %  Stepwise feature selection
 [B,SE,PVAL,INMODEL,STATS,NEXTSTEP,HISTORY]=stepwisefit(S,Y);  %Stepwise feature selection
 S1=[PVAL'; S]; %Added p-value variable for filtering
 k=1;
 for m=1:size(S1,2)
-    if any(S1(1,m)<0.1)
+    if any(S1(1,m)<p)
         new_S(:,k)=[S1(:,m)];
         k=k+1;
     end
