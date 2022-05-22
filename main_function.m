@@ -2,6 +2,10 @@ clc;
 clear;
 setdemorandstream(1);
 
+%% p-value 
+global p
+p=0.1;
+
 %% Empty matrix for storage
 toc1=[]; toc2=[];
 t1=[];t2=[];
