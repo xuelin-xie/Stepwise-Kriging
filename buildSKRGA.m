@@ -9,7 +9,7 @@ global p
 %%  Stepwise feature selection
 Z=[S; AX]; %Feature selection points
 ZY=[Y; AY]; %The actual values of the function at the feature selection points
-[B,SE,PVAL,INMODEL,STATS,NEXTSTEP,HISTORY]=stepwisefit(Z,ZY);  %Stepwise feature selection
+[B,SE,PVAL,INMODEL,STATS,NEXTSTEP,HISTORY]=stepwisefit(Z,ZY,'penter',p);  %Stepwise feature selection
 S1=[PVAL'; S]; %Added p-value variable for filtering
 AX=[PVAL'; AX]; %Added p-value variable for filtering
 k=1;
