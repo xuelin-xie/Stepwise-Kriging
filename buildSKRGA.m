@@ -4,6 +4,8 @@ function [Skrgmodel, new_AX]= buildSKRGA(S,Y,AX,AY)
 % new_S is the new independent variable (or new feature) initial points after feature selection
 % new_AX is the new independent variable (or new feature) the additional evaluation points after feature selection
 new_S=[];new_AX=[];
+%% p-value 
+global p
 %%  Stepwise feature selection
 Z=[S; AX]; %Feature selection points
 ZY=[Y; AY]; %The actual values of the function at the feature selection points
