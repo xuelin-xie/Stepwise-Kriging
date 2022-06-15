@@ -1,1 +1,1 @@
-# Stepwise-Kriging
+# Stepwise-Kriging model
